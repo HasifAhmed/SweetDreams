@@ -20,9 +20,24 @@ public class MatrixFinder{
     //Constructor: MethodFinder
     //What it does: Generates some testcases to test out the finder method by instantiating and filling a 2D array
     public MatrixFinder(){
-      //testcase = new int[][] { {0,1,2}, {1,2,3}, {2,3,4} };
-      //testcase = new int[][] { {0,3,7}, {1,4,8}, {2,6,11} };
-      testcase = new int[][] { {0,2,7}, {1,4,8}, {2,6,11} };
+	//testcase = new int[][] { {0,1,2}, {1,2,3}, {2,3,4} };
+	//testcase = new int[][] { {0,3,7}, {1,4,8}, {2,6,11} };
+	//testcase = new int[][] { {0,2,7}, {1,4,8}, {2,6,11} };
+	testcase = new int[10000][10000];
+	int count = 0;
+	int count2 = 1;
+	for(int i = 0; i < testcase.length; i++){
+	    count += 1;
+	    for(int j = 0; j < testcase.length; j++){
+		testcase[i][j] = count;
+		count += 9;
+
+	    }
+	    count = count2;
+	    count2 += 2;
+	}
+	testcase[0][999] = 1000000000;
+      
     }
 
     //Method: finder()
@@ -67,16 +82,27 @@ public class MatrixFinder{
     //TESTING!!!!!!!!!!!!!!!!
     public static void main(String[] args) {
       MatrixFinder test = new MatrixFinder();
-      SOP("--------------------------------------");
-      SOP("The number we are looking for is 3.");
-      SOP("The given array is...");
-      SOP(test);
-      SOP("The position of the 3 is...");
-      SOP(finder(test.testcase, 3));
+      
+      
+      // SOP("The number we are looking for is 3.");
+      // SOP("The given array is...");
+      // SOP(test);
+      // SOP("The position of the 3 is...");
+      int counter = 0;
+      for(int i = 0; i < 1000; i ++){
+	  SOP("--------------------------------------");
+	  long start = System.nanoTime();
+	  SOP(finder(test.testcase, 1000000000));
+	  long end = System.nanoTime() - start;
+	  counter += end;
+	  System.out.println("It took " + end + " nanoseconds.");
 
 
 
 
+      }
+      counter /= 1000;
+      SOP(counter + "");
     }
 
 }
