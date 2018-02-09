@@ -4,7 +4,9 @@
 //HW03 -- I Am Still Searching
 //2018-02-02
 public class MatrixFinder{
-    int[][] testcase;
+    int[][] testcase0;
+    int[][] testcase1;
+    int[][] testcase2;
     /* This method¡¯s goal is to search through a 2D array for a specific int. It takes a 2D int array and a int value.
     The int value is the one you are seeking inside of the 2D int array. Let¡¯s call the method Finder(). int[0][n-1] is the
     starting point of the algorithm, and is the top right corner of the matrix. Because this matrix is ordered from L-> R and
@@ -23,7 +25,9 @@ public class MatrixFinder{
 	//testcase = new int[][] { {0,1,2}, {1,2,3}, {2,3,4} };
 	//testcase = new int[][] { {0,3,7}, {1,4,8}, {2,6,11} };
 	//testcase = new int[][] { {0,2,7}, {1,4,8}, {2,6,11} };
-	testcase = new int[10000][10000];
+	testcase0 = new int[1000][1000];
+	testcase1 = new int[10000][10000];
+	testcase2 = new int[100000][100000];
 	int count = 0;
 	int count2 = 1;
 	for(int i = 0; i < testcase.length; i++){
