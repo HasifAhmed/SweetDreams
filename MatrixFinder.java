@@ -71,8 +71,8 @@ public class MatrixFinder{
 	testcase4[0][4999] = 1000000000;
 	testcase5[0][5999] = 1000000000;
 	testcase6[0][6999] = 1000000000;
-	
-      
+
+
     }
 
     //Method: finder()
@@ -114,30 +114,7 @@ public class MatrixFinder{
       System.out.println(x);
     }
 
-    //TESTING!!!!!!!!!!!!!!!!
-    public static void main(String[] args) {
-      MatrixFinder test = new MatrixFinder();
-      
-      
-      // SOP("The number we are looking for is 3.");
-      // SOP("The given array is...");
-      // SOP(test);
-      // SOP("The position of the 3 is...");
-      int counter = 0;
-      for(int i = 0; i < 1000; i ++){
-	  SOP("--------------------------------------");
-	  long start = System.nanoTime();
-	  SOP(finder(test.testcase0, 1000000000));
-	  long end = System.nanoTime() - start;
-	  counter += end;
-	  System.out.println("It took " + end + " nanoseconds.");
 
 
-
-
-      }
-      counter /= 1000;
-      SOP(counter + "");
-    }
 
 }
