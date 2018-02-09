@@ -20,4 +20,6 @@ Results:
 ![alt text](https://github.com/HasifAhmed/SweetDreams/blob/master/graph.png)
 
 Analysis: If one looks at our data, they can see that their is a constant linear change suggesting a positive correlation. One can also see
-that for each test case, the time is always less than n squared. By looking at the data, it seems more to align with O(nlogn).
+that for each test case, the time is always less than n squared. By looking at the data, it seems more to align with O(nlogn). What should be
+noted is that we took the average of a 1000 test cases because often when running the program there may be sudden spikes in the data which we
+do not know how to explain or counter. 
